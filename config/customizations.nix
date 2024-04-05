@@ -4,5 +4,7 @@
     ./virt.nix
     ./corporate-id.nix
     ./iso-user.nix
+
+    ./build-faster.nix
   ];
 }
