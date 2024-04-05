@@ -1,4 +1,4 @@
-# Linux TechTips - the Live Distribution for Linux and Security Professionals
+# Linux Tech Tips - the Live Distribution for Linux and Security Professionals
 
 Welcome to Linux Tech Tips (short **LinuxTT**), a [NixOS](https://nixos.org) based Live Distribution with the focus on security professionals and linux power users.
 
@@ -14,6 +14,9 @@ through afterwards.
 
 # Credits
 Thanks to the [NixOS Community](https://nixos.org), with this Operating System literally everyone can be a Linux Distribution creator!
+
+# Confusion
+If you are looking for the *other* Linus Tech Tips, you can find them [here](https://social.kernel.org/torvalds)
 
 # License
 all LinuxTT configuration and assets are licensed under MIT
