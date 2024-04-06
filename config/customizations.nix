@@ -1,6 +1,7 @@
 {
   imports = [
-    #./pentesting-tools.nix
+    ./pentesting-tools.nix
+    ./core.nix
     ./virt.nix
     ./branding.nix
     ./iso-user.nix
