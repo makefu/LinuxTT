@@ -1,12 +1,12 @@
-{ pkgs, lib, ...}:
+{ pkgs, lib, config, ...}:
 let
   user = config.linuxtt.user;
 in
 
 { # works for kde
   services.xserver = {
-    desktopManager.plasma6.enable = true;
-    desktopManager.plasma5.enable = lib.mkForce true;
+    #desktopManager.plasma6.enable = true;
+    #desktopManager.plasma5.enable = lib.mkForce false;
   };
 
   system.activationScripts.installerDesktop = let
@@ -24,6 +24,7 @@ in
     ln -sfT ${manualDesktopFile} ${desktopDir + "nixos-manual.desktop"}
     ln -sfT ${pkgs.gparted}/share/applications/gparted.desktop ${desktopDir + "gparted.desktop"}
     ln -sfT ${pkgs.konsole}/share/applications/org.kde.konsole.desktop ${desktopDir + "org.kde.konsole.desktop"}
+    ln -sfT ${pkgs.calamares-nixos}share/applications/io.calamares.desktop ${desktopDir + "io.calamares.desktop"}
   '';
 
   environment.systemPackages = with pkgs;[
