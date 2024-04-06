@@ -22,7 +22,7 @@
     packages."${system}" = {
       isoImage = self.nixosConfigurations.isoImage.config.system.build.isoImage;
       default = self.packages."${system}".isoImage;
-      diskImage = selfnixosConfigurations.diskImage.config.system.build.diskoImagesScript
+      diskImage = self.nixosConfigurations.diskImage.config.system.build.diskoImagesScript;
     };
 
     nixosConfigurations = {
@@ -33,7 +33,7 @@
           disko.nixosModules.disko
           #"${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-calamares-gnome.nix"
           "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-plasma5.nix" 
-          ./config/iso-customizations.nix
+          ./config/iso/customizations.nix
         ];
       };
       diskImage = nixpkgs.lib.nixosSystem {
@@ -41,7 +41,7 @@
 
         modules = [
           ./config/disk/hybrid.nix
-          ./config/disk-customizations.nix
+          ./config/disk/customizations.nix
         ];
       };
     };
