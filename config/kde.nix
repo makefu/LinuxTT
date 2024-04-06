@@ -24,7 +24,7 @@ in
     ln -sfT ${manualDesktopFile} ${desktopDir + "nixos-manual.desktop"}
     ln -sfT ${pkgs.gparted}/share/applications/gparted.desktop ${desktopDir + "gparted.desktop"}
     ln -sfT ${pkgs.konsole}/share/applications/org.kde.konsole.desktop ${desktopDir + "org.kde.konsole.desktop"}
-    ln -sfT ${pkgs.calamares-nixos}share/applications/io.calamares.desktop ${desktopDir + "io.calamares.desktop"}
+    ln -sfT ${pkgs.calamares-nixos}/share/applications/io.calamares.calamares.desktop ${desktopDir + "io.calamares.calamares.desktop"}
   '';
 
   environment.systemPackages = with pkgs;[
