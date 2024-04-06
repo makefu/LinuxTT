@@ -1,10 +1,10 @@
 {
   imports = [
-    ./pentesting-tools.nix
+    #./pentesting-tools.nix
     ./virt.nix
-    ./corporate-id.nix
+    ./branding.nix
     ./iso-user.nix
-
+    ./kde.nix
     ./build-faster.nix
   ];
 }
