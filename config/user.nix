@@ -3,7 +3,7 @@ let
   user = "linus";
 in
 {
-  options.linuxtt.user = lib.mkOption {
+  options.ttlinux.user = lib.mkOption {
     default = user;
     type = lib.types.str;
   };

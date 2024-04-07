@@ -1,8 +1,8 @@
 {
   imports = [
-    ../pentesting-tools.nix
+    #../pentesting-tools.nix
     ../core.nix
-    ../virt.nix
+    #../virt.nix
     ../kde.nix
     ../user.nix
   ];

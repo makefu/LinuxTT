@@ -1,7 +1,7 @@
 { lib, config, pkgs, ... }: {
-  isoImage.isoBaseName = "LinuxTT";
-  system.nixos.distroName = "LinuxTT";
-  isoImage.volumeID = "linuxtt-${config.system.nixos.release}-${pkgs.stdenv.hostPlatform.uname.processor}";
+  isoImage.isoBaseName = "Tech Tips Linux";
+  system.nixos.distroName = "Tech Tips Linux";
+  isoImage.volumeID = "ttlinux-${config.system.nixos.release}-${pkgs.stdenv.hostPlatform.uname.processor}";
   isoImage.appendToMenuLabel = " LiveCD";
 
   isoImage.splashImage = pkgs.fetchurl {

@@ -7,7 +7,7 @@
   };
 
   outputs = { self, nixpkgs,disko }@inputs: let
-    system = "x86_64-linux"; # linuxTT is currently only available for x86_linux
+    system = "x86_64-linux"; # TTLinux is currently only available for x86_linux
     pkgs = (import nixpkgs {
       inherit system;
       config = {

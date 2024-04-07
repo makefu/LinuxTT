@@ -1,6 +1,6 @@
 { pkgs, lib, config, ...}:
 let
-  user = config.linuxtt.user;
+  user = config.ttlinux.user;
 in
 
 { # works for kde
