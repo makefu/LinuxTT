@@ -9,6 +9,18 @@ in
     #desktopManager.plasma5.enable = lib.mkForce false;
   };
 
+  home-manager.users."nixos" = {
+    home.stateVersion = "23.11";
+    programs.plasma = {
+      enable = true;
+      workspace = {
+        clickItemTo = "select";
+        wallpaper = ../assets/wallpaper1.jpg;
+        lookAndFeel = "org.krede.breezetwilight.desktop";
+      };
+    };
+  };
+
   system.activationScripts.installerDesktop = let
 
     # Comes from documentation.nix when xserver and nixos.enable are true.
@@ -25,9 +37,6 @@ in
     ln -sfT ${pkgs.gparted}/share/applications/gparted.desktop ${desktopDir + "gparted.desktop"}
     ln -sfT ${pkgs.konsole}/share/applications/org.kde.konsole.desktop ${desktopDir + "org.kde.konsole.desktop"}
     ln -sfT ${pkgs.calamares-nixos}/share/applications/io.calamares.calamares.desktop ${desktopDir + "io.calamares.calamares.desktop"}
-
-
-    ln  -sfT ${../assets/wallpaper1.png} ${homeDir + ".background-image" }
   '';
 
   environment.systemPackages = with pkgs;[
