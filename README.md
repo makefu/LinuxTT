@@ -12,6 +12,13 @@ When you follow the installer through you will not have TTLinux flavour installe
 NixOS, which is also great! Be sure to follow the [official documentation](https://nixos.org/manual/nixos/stable/#sec-changing-config)
 through afterwards.
 
+## Testing
+
+```
+nix develop
+qemu-kvm -boot d -cdrom result/iso/*.iso -m 4096
+```
+
 # Confusion
 If you are looking for the *other* Linus Tech Tips, you can find them [here](https://social.kernel.org/torvalds)
 

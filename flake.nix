@@ -25,6 +25,10 @@
       buildDiskImage = self.nixosConfigurations.diskImage.config.system.build.diskoImagesScript;
     };
 
+    devShells.default = pkgs.mkShellNoCC {
+      buildInputs = [ pkgs.qemu_kvm ];
+    };
+
     nixosConfigurations = {
       isoImage = nixpkgs.lib.nixosSystem {
         inherit pkgs system;

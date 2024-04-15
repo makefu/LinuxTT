@@ -5,7 +5,7 @@
     ../virt.nix
     ./branding.nix
     ../user.nix
-    ./kde.nix
+    ../kde.nix
     ./build-faster.nix
   ];
 }
