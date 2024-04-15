@@ -36,7 +36,7 @@
     };
 
     devShells."${system}".default = pkgs.mkShellNoCC {
-      buildInputs = [ pkgs.qemu_kvm ];
+      buildInputs = [ pkgs.qemu_kvm pkgs.imagemagick ];
     };
 
     nixosConfigurations = {
